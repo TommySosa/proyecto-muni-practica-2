@@ -20,3 +20,11 @@ function filterBooksByAuthor(books, authorName){
 }
 const filteredBooks = filterBooksByAuthor(books, 'Gabriel García Márquez');
 console.log(filteredBooks);
+
+const modifiedBooks = filteredBooks.map(book => {
+    return { ...book, author: 'Test' };
+});
+
+console.log(modifiedBooks);
+console.log(books);
+//muestra el array original sin cambios debido a que se usó el spread operator 
