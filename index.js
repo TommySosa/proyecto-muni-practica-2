@@ -16,15 +16,19 @@ const books = [
 ];
 
 function filterBooksByAuthor(books, authorName){
-    return books.filter(book => book.author === authorName)
+    return books.filter(book => book.author.includes(authorName))
 }
-const filteredBooks = filterBooksByAuthor(books, 'Gabriel García Márquez');
+const filteredBooks = filterBooksByAuthor(books, 'Márquez');
+console.log("libros filtrados");
 console.log(filteredBooks);
 
 const modifiedBooks = filteredBooks.map(book => {
     return { ...book, author: 'Test' };
 });
 
+console.log("libros modificados: ");
 console.log(modifiedBooks);
+console.log("Libros: ");
 console.log(books);
+
 //muestra el array original sin cambios debido a que se usó el spread operator 
