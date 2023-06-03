@@ -1,34 +1,40 @@
 const books = [
-  { title: 'El Aleph', author: 'Jorge Luis Borges' },
-  { title: 'La ciudad y los perros', author: 'Mario Vargas Llosa' },
-  { title: 'Cien años de soledad', author: 'Gabriel García Márquez' },
-  { title: 'Rayuela', author: 'Julio Cortázar' },
-  { title: 'Ficciones', author: 'Jorge Luis Borges' },
-  { title: 'El hacedor', author: 'Jorge Luis Borges' },
-  { title: 'Los pasos perdidos', author: 'Alejo Carpentier' },
-  { title: 'El reino de este mundo', author: 'Alejo Carpentier' },
-  { title: 'La fiesta del chivo', author: 'Mario Vargas Llosa' },
-  { title: 'La tía Julia y el escribidor', author: 'Mario Vargas Llosa' },
-  { title: 'Crónica de una muerte anunciada', author: 'Gabriel García Márquez' },
-  { title: 'El amor en los tiempos del cólera', author: 'Gabriel García Márquez' },
-  { title: 'Bestiario', author: 'Julio Cortázar' },
-  { title: 'Las armas secretas', author: 'Julio Cortázar' }
+  { title: "El Aleph", author: "Jorge Luis Borges" },
+  { title: "La ciudad y los perros", author: "Mario Vargas Llosa" },
+  { title: "Cien años de soledad", author: "Gabriel García Márquez" },
+  { title: "Rayuela", author: "Julio Cortázar" },
+  { title: "Ficciones", author: "Jorge Luis Borges" },
+  { title: "El hacedor", author: "Jorge Luis Borges" },
+  { title: "Los pasos perdidos", author: "Alejo Carpentier" },
+  { title: "El reino de este mundo", author: "Alejo Carpentier" },
+  { title: "La fiesta del chivo", author: "Mario Vargas Llosa" },
+  { title: "La tía Julia y el escribidor", author: "Mario Vargas Llosa" },
+  {
+    title: "Crónica de una muerte anunciada",
+    author: "Gabriel García Márquez",
+  },
+  {
+    title: "El amor en los tiempos del cólera",
+    author: "Gabriel García Márquez",
+  },
+  { title: "Bestiario", author: "Julio Cortázar" },
+  { title: "Las armas secretas", author: "Julio Cortázar" },
 ];
 
-function filterBooksByAuthor(books, authorName){
-    return books.filter(book => book.author.includes(authorName))
+function filterBooksByAuthor(books, authorName) {
+  return books.filter((book) => book.author.includes(authorName));
 }
-const filteredBooks = filterBooksByAuthor(books, 'Márquez');
+const filteredBooks = filterBooksByAuthor(books, "Carpentier");
 console.log("libros filtrados");
 console.log(filteredBooks);
 
-const modifiedBooks = filteredBooks.map(book => {
-    return { ...book, author: 'Test' };
+const modifiedBooks = filteredBooks.map((book) => {
+  return { ...book, author: "Test" };
 });
 
 console.log("libros modificados: ");
 console.log(modifiedBooks);
 console.log("Libros: ");
-console.log(books);
 
-//muestra el array original sin cambios debido a que se usó el spread operator 
+console.log(books);
+//muestra el array original sin cambios debido a que se usó el spread operator
